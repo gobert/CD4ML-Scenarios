@@ -4,11 +4,11 @@
 
 export PYTHONWARNINGS="ignore:numpy"
 
-command="pipenv run python -m pytest --cov=cd4ml --cov-report html:cov_html test"
+command="python3 -m pytest --cov=cd4ml --cov-report html:cov_html test"
 
 echo "$command"
 eval "$command"
 
 echo
 echo Flake8 comments:
-pipenv run flake8 --max-line-length=120 cd4ml
+run flake8 --max-line-length=120 cd4ml
